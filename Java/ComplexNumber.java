@@ -39,19 +39,34 @@ class ComplexNumber {
     }
 
     public ComplexNumber add(ComplexNumber input) {
-
+        double tempReal = this.real + input.real;
+        double tempImag = this.imag + input.imag;
+        ComplexNumber output = new ComplexNumber(tempReal, tempImag);
+        return output;
     }
 
     public ComplexNumber sub(ComplexNumber input) {
-
+        double tempReal = this.real - input.real;
+        double tempImag = this.imag - input.imag;
+        ComplexNumber output = new ComplexNumber(tempReal, tempImag);
+        return output;
     }
 
     public ComplexNumber mult(ComplexNumber input) {
-
+        double tempReal = this.real * input.real;
+        double tempImag = this.imag * input.imag;
+        ComplexNumber output = new ComplexNumber(tempReal, tempImag);
+        return output;
     }
 
-    public ComplexNumber div(ComplexNumber input) {
-
+    public ComplexNumber div(ComplexNumber input) throws ArithmeticException {
+        if (input.real == 0 || input.imag == 0) {
+            throw new ArithmeticException("Cannot divide by 0");
+        } 
+        double tempReal = this.real / input.real;
+        double tempImag = this.imag / input.imag;
+        ComplexNumber output = new ComplexNumber(tempReal, tempImag);
+        return output;
     }
 
     public double mag() {
@@ -66,9 +81,8 @@ class ComplexNumber {
 
     }
 
+    @Override
     public boolean equals(Object obj) {
-
+        return true;
     }
-
-    
 }
