@@ -70,7 +70,8 @@ class ComplexNumber {
     }
 
     public double mag() {
-
+        double magnitude = this.real*this.real + this.imag*this.imag;
+        return magnitude;
     }
 
     public ComplexNumber conj() {
