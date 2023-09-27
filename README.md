@@ -1,16 +1,22 @@
 # TO DO LIST
 
 # JAVA
-- [ ] setR()
-- [ ] setI()
-- [ ] getR()
-- [ ] getI()
+**Public**
+- [x] setR()
+- [x] setI()
+- [x] getR()
+- [x] getI()
 - [ ] toString()
-- [ ] add() 
-- [ ] sub() 
-- [ ] multi()
-- [ ] div() {div by 0 (real and imag), ArithmeticError}
+- [x] add() 
+- [x] sub() 
+- [x] multi()
+- [x] div() {div by 0 (real and imag), ArithmeticError}
+- [ ] mag()
+- [ ] conj()
 - [ ] sqrt()
+
+**Private**
+- [ ] Member Variables
 
 # Header file (C++)
 
