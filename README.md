@@ -2,6 +2,7 @@
 
 # JAVA
 **Public**
+- [x] Constructors
 - [x] setR()
 - [x] setI()
 - [x] getR()
@@ -14,9 +15,11 @@
 - [ ] mag()
 - [ ] conj()
 - [ ] sqrt()
+- [ ] equals()
 
 **Private**
-- [ ] Member Variables
+- [ ] real
+- [ ] imag
 
 # Header file (C++)
 
@@ -32,11 +35,15 @@
 - [ ] sub() 
 - [ ] multi()
 - [ ] div() {div by 0 (real and imag), ArithmeticError}
+- [ ] mag()
+- [ ] conj()
 - [ ] sqrt()
+- [ ] equals()
 - [ ] Add ";" to end of .h file
 
 **Private**
-- [ ] Member Variables
+- [ ] real
+- [ ] imag
 
 # C++ File
 **Public**
@@ -47,7 +54,11 @@
 - [ ] sub() 
 - [ ] multi()
 - [ ] div() {div by 0 (real and imag), ArithmeticError}
+- [ ] mag()
+- [ ] conj()
 - [ ] sqrt()
+- [ ] equals()
 
 **Private**
-- [ ] Member Variables
+- [ ] real
+- [ ] imag
