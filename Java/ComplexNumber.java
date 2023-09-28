@@ -56,16 +56,32 @@ class ComplexNumber {
         
         if (real_isZero && imag_isZero) {
             output = "0";
-        } else if (real_isZero && !imag_isZero) {
+        } else if (!real_isZero && imag_isZero) {
             if (real_isNegative) {
                 output = "-" + tempReal;
             } else {
                 output = "" + tempReal;
             }
             output = "" + tempReal;
+        } else if (real_isZero && !imag_isZero) {
+            if (imag_isNegative) {
+                output = "-" + tempImag + "i";
+            } else {
+                output = "" + tempImag + "i";
+            }
+        } else {
+            if (real_isNegative && imag_isNegative) {
+                output = "-" + tempReal + " + -" + tempImag + "i";
+            } else if (!real_isNegative && imag_isNegative) {
+                output = "" + tempReal + " + -" + tempImag + "i";
+            } else if (real_isNegative && !imag_isNegative) {
+                output = "-" + tempReal + " + " + tempImag + "i";
+            } else {
+                output = "" + tempReal + " + " + tempImag + "i";
+            }
         }
 
-        return "";
+        return output;
     }
 
     public ComplexNumber add(ComplexNumber input) {
