@@ -93,14 +93,16 @@ class ComplexNumber {
             tempReal = Math.sqrt(Math.abs(this.real));
             tempImag = Math.sqrt(Math.abs(this.imag));
         } else if (!real_isNegative && imag_isNegative) {
-            tempReal = Math.sqrt(Math.abs(this.real)) - 
-                Math.sqrt(Math.abs(this.imag));
+            tempReal = Math.sqrt(Math.abs(this.real))
+                - Math.sqrt(Math.abs(this.imag));
             tempImag = 0;
         } else if (real_isNegative && !imag_isNegative) {
             tempReal = 0;
-            tempImag = Math.sqrt(Math.abs(this.imag));
+            tempImag = Math.sqrt(Math.abs(this.imag)) 
+                + Math.sqrt(Math.abs(this.real));
         } else {
-            
+            tempReal = -1 * Math.sqrt(Math.abs(this.imag));
+            tempImag = Math.sqrt(Math.abs(this.real));
         }
         
         ComplexNumber output = new ComplexNumber(tempReal, tempImag);
