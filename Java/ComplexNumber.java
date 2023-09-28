@@ -75,11 +75,20 @@ class ComplexNumber {
     }
 
     public ComplexNumber conj() {
-
+        double tempImag = this.imag * -1;
+        ComplexNumber output = new ComplexNumber(this.real, tempImag);
+        return output;
     }
 
     public ComplexNumber sqrt() {
-
+        boolean real_isNegative = false;
+        boolean imag_isNegative = false;
+        if (this.real < 0) real_isNegative = true;
+        if (this.imag < 0) real_isNegative = true;
+        double tempReal = Math.sqrt(Math.abs(this.real));
+        double tempImag = Math.sqrt(Math.abs(this.imag));
+        ComplexNumber output = new ComplexNumber(tempReal, tempImag);
+        return output;
     }
 
     @Override
