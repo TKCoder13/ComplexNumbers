@@ -18,11 +18,11 @@ class ComplexNumber {
         this.imag = cn.imag;
     }
 
-    public void setR(double input) {
+    public void setReal(double input) {
         this.real = input;
     }
 
-    public void setI(double input) {
+    public void setImag(double input) {
         this.imag = input;
     }
 
@@ -83,10 +83,26 @@ class ComplexNumber {
     public ComplexNumber sqrt() {
         boolean real_isNegative = false;
         boolean imag_isNegative = false;
+        double tempReal = 0;
+        double tempImag = 0;
         if (this.real < 0) real_isNegative = true;
         if (this.imag < 0) real_isNegative = true;
-        double tempReal = Math.sqrt(Math.abs(this.real));
-        double tempImag = Math.sqrt(Math.abs(this.imag));
+        
+        // -- Check for logic of sqrt(imag)
+        if (!real_isNegative && !imag_isNegative) {
+            tempReal = Math.sqrt(Math.abs(this.real));
+            tempImag = Math.sqrt(Math.abs(this.imag));
+        } else if (!real_isNegative && imag_isNegative) {
+            tempReal = Math.sqrt(Math.abs(this.real)) - 
+                Math.sqrt(Math.abs(this.imag));
+            tempImag = 0;
+        } else if (real_isNegative && !imag_isNegative) {
+            tempReal = 0;
+            tempImag = Math.sqrt(Math.abs(this.imag));
+        } else {
+            
+        }
+        
         ComplexNumber output = new ComplexNumber(tempReal, tempImag);
         return output;
     }
