@@ -34,6 +34,7 @@ class ComplexNumber {
         return this.imag;
     }
 
+    @Override
     public String toString(ComplexNumber input) {
         boolean real_isNegative = false;
         boolean imag_isNegative = false;
@@ -71,9 +72,9 @@ class ComplexNumber {
             }
         } else {
             if (real_isNegative && imag_isNegative) {
-                output = "-" + tempReal + " + -" + tempImag + "i";
+                output = "-" + tempReal + " - " + tempImag + "i";
             } else if (!real_isNegative && imag_isNegative) {
-                output = "" + tempReal + " + -" + tempImag + "i";
+                output = "" + tempReal + " - " + tempImag + "i";
             } else if (real_isNegative && !imag_isNegative) {
                 output = "-" + tempReal + " + " + tempImag + "i";
             } else {

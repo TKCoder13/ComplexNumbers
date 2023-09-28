@@ -5,8 +5,8 @@
 - [x] Constructors
 - [x] setR()
 - [x] setI()
-- [x] getR()
-- [x] getI()
+- [x] getReal()
+- [x] getImag()
 - [ ] toString()
 - [x] add() 
 - [x] sub() 
