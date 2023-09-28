@@ -26,11 +26,11 @@ class ComplexNumber {
         this.imag = input;
     }
 
-    public double getR() {
+    public double getReal() {
         return this.real;
     }
 
-    public double getI() {
+    public double getImag() {
         return this.imag;
     }
 
