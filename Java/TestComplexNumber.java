@@ -1,5 +1,3 @@
-package ComplexNumber;
-
 public class TestComplexNumber {
 
 	public static void main(String[] args) {
