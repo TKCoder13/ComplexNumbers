@@ -35,6 +35,36 @@ class ComplexNumber {
     }
 
     public String toString(ComplexNumber input) {
+        boolean real_isNegative = false;
+        boolean imag_isNegative = false;
+        boolean real_isZero = false;
+        boolean imag_isZero = false;
+        String output = "";
+
+        if (input.real < 0) {
+           real_isNegative = true; 
+        } else if (input.real == 0) {
+            real_isZero = true;
+        }
+        if (input.imag < 0) {
+            real_isNegative = true;
+        } else if (input.imag == 0) {
+            imag_isZero = true;
+        }
+        double tempReal = Math.abs(input.real);
+        double tempImag = Math.abs(input.imag);
+        
+        if (real_isZero && imag_isZero) {
+            output = "0";
+        } else if (real_isZero && !imag_isZero) {
+            if (real_isNegative) {
+                output = "-" + tempReal;
+            } else {
+                output = "" + tempReal;
+            }
+            output = "" + tempReal;
+        }
+
         return "";
     }
 
