@@ -35,6 +35,21 @@ class ComplexNumber {
     }
 
     @Override
+    public boolean equals(Object obj) {
+        if (obj instanceof ComplexNumber) {
+			ComplexNumber rnObj = (ComplexNumber) obj;
+			if (rnObj.real == this.real &&
+            rnObj.imag == this.imag) {
+                return true;
+            } else {
+                return false;
+            } 
+		} else {
+			return false;
+		}
+    }
+
+    @Override
     public String toString() {
         boolean real_isNegative = false;
         boolean imag_isNegative = false;
@@ -47,11 +62,13 @@ class ComplexNumber {
         } else if (this.real == 0) {
             real_isZero = true;
         }
+
         if (this.imag < 0) {
-            real_isNegative = true;
+            imag_isNegative = true;
         } else if (this.imag == 0) {
             imag_isZero = true;
         }
+
         double tempReal = Math.abs(this.real);
         double tempImag = Math.abs(this.imag);
         
@@ -63,7 +80,6 @@ class ComplexNumber {
             } else {
                 output = "" + tempReal;
             }
-            output = "" + tempReal;
         } else if (real_isZero && !imag_isZero) {
             if (imag_isNegative) {
                 output = "-" + tempImag + "i";
@@ -107,17 +123,19 @@ class ComplexNumber {
     }
 
     public ComplexNumber div(ComplexNumber input) throws ArithmeticException {
-        if (input.real == 0 || input.imag == 0) {
+        
+        try {
+            double tempReal = this.real / input.real;
+            double tempImag = this.imag / input.imag;
+            ComplexNumber output = new ComplexNumber(tempReal, tempImag);
+            return output;
+        } catch(ArithmeticException e) {
             throw new ArithmeticException("Cannot divide by 0");
-        } 
-        double tempReal = this.real / input.real;
-        double tempImag = this.imag / input.imag;
-        ComplexNumber output = new ComplexNumber(tempReal, tempImag);
-        return output;
+        }
     }
 
     public double mag() {
-        double magnitude = this.real*this.real + this.imag*this.imag;
+        double magnitude = Math.sqrt(this.real*this.real + this.imag*this.imag);
         return magnitude;
     }
 
@@ -154,10 +172,5 @@ class ComplexNumber {
         
         ComplexNumber output = new ComplexNumber(tempReal, tempImag);
         return output;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        return true;
     }
 }

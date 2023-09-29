@@ -7,19 +7,19 @@
 - [x] setI()
 - [x] getReal()
 - [x] getImag()
-- [ ] toString()
+- [x] toString()
 - [x] add() 
 - [x] sub() 
 - [x] multi()
-- [x] div() {div by 0 (real and imag), ArithmeticError}
-- [ ] mag()
-- [ ] conj()
-- [ ] sqrt()
-- [ ] equals()
+- [x] div() {div by 0 is not throwing exception, ArithmeticError}
+- [x] mag()
+- [x] conj()
+- [x] sqrt()
+- [x] equals()
 
 **Private**
-- [ ] real
-- [ ] imag
+- [x] real
+- [x] imag
 
 # Header file (C++)
 
