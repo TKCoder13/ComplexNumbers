@@ -35,25 +35,25 @@ class ComplexNumber {
     }
 
     @Override
-    public String toString(ComplexNumber input) {
+    public String toString() {
         boolean real_isNegative = false;
         boolean imag_isNegative = false;
         boolean real_isZero = false;
         boolean imag_isZero = false;
         String output = "";
 
-        if (input.real < 0) {
+        if (this.real < 0) {
            real_isNegative = true; 
-        } else if (input.real == 0) {
+        } else if (this.real == 0) {
             real_isZero = true;
         }
-        if (input.imag < 0) {
+        if (this.imag < 0) {
             real_isNegative = true;
-        } else if (input.imag == 0) {
+        } else if (this.imag == 0) {
             imag_isZero = true;
         }
-        double tempReal = Math.abs(input.real);
-        double tempImag = Math.abs(input.imag);
+        double tempReal = Math.abs(this.real);
+        double tempImag = Math.abs(this.imag);
         
         if (real_isZero && imag_isZero) {
             output = "0";
