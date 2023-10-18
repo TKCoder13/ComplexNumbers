@@ -10,8 +10,9 @@ class ComplexNumber {
     public:
         // -- Constructors
         ComplexNumber();
-        ComplexNumber(double real, double imag);
+        ComplexNumber(double realNum, double imagNum);
         ComplexNumber(const ComplexNumber &src);
+        ~ComplexNumber();
 
         // -- Methods
         void setR(double num);
@@ -27,7 +28,6 @@ class ComplexNumber {
         ComplexNumber conj();
         ComplexNumber sqrt();
         bool equals(ComplexNumber rhs);
-
 
     private:
         double real;
