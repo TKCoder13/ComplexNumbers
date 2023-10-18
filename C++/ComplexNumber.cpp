@@ -55,9 +55,12 @@ ComplexNumber ComplexNumber::sub(ComplexNumber rhs) {
 }
 
 ComplexNumber ComplexNumber::mult(ComplexNumber rhs) {
-    double realOuput = this->real * rhs.real;
-    double imagOuput = this->imag * rhs.imag;
+    double realOutput = this->real * rhs.real;
+    double imagOutput = this->imag * rhs.imag;
     ComplexNumber output(realOutput, imagOutput);
     return output;
 }
 
+ComplexNumber ComplexNumber::div(ComplexNumber rhs) {
+    
+} 
