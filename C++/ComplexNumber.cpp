@@ -64,5 +64,33 @@ ComplexNumber ComplexNumber::mult(ComplexNumber rhs) {
 }
 
 ComplexNumber ComplexNumber::div(ComplexNumber rhs) {
-    
+    char divZeroMessage[] = "Cannot be divisible by 0";
+    char *divZeroException = divZeroMessage;
+    try {
+        if (rhs.real == 0 || rhs.imag == 0) {
+            throw divZeroException;
+        }
+        double realOutput = this->real / rhs.real;
+        double imagOutput = this->imag / rhs.imag;
+        ComplexNumber output(realOutput, imagOutput);
+        return output;
+    } catch (const char* exception) {
+        cout << exception << endl;
+    }
 } 
+
+double ComplexNumber::mag() {
+
+}
+
+ComplexNumber ComplexNumber::conj() {
+
+}
+
+ComplexNumber ComplexNumber::sqrt() {
+
+}
+
+bool ComplexNumber::equals(ComplexNumber& rhs) {
+
+}

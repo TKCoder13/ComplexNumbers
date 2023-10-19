@@ -27,7 +27,7 @@ class ComplexNumber {
         double mag();
         ComplexNumber conj();
         ComplexNumber sqrt();
-        bool equals(ComplexNumber rhs);
+        bool equals(ComplexNumber& rhs);
 
     private:
         double real;
