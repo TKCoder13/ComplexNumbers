@@ -15,10 +15,10 @@ class ComplexNumber {
         ~ComplexNumber();
 
         // -- Methods
-        void setR(double num);
-        void setI(double num);
-        double getR();
-        double getI();
+        void setReal(double num);
+        void setImag(double num);
+        double getReal();
+        double getImag();
         string toString();
         ComplexNumber add(ComplexNumber rhs);
         ComplexNumber sub(ComplexNumber rhs);

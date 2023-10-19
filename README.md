@@ -11,7 +11,7 @@
 - [x] add() 
 - [x] sub() 
 - [x] multi()
-- [x] div() {div by 0 is not throwing exception, ArithmeticError}
+- [x] div() {div by 0 (real and imag), ArithmeticError}
 - [x] mag()
 - [x] conj()
 - [x] sqrt()

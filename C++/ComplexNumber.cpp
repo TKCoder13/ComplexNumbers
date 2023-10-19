@@ -20,19 +20,21 @@ ComplexNumber::ComplexNumber(const ComplexNumber &src) {
     this->imag = src.imag;
 }
 
-void ComplexNumber::setR(double num) {
+ComplexNumber::~ComplexNumber() {}
+
+void ComplexNumber::setReal(double num) {
     this->real = num;
 }
 
-void ComplexNumber::setI(double num) {
+void ComplexNumber::setImag(double num) {
     this->imag = num;
 }
 
-double ComplexNumber::getR() {
+double ComplexNumber::getReal() {
     return this->real;
 }
 
-double ComplexNumber::getI() {
+double ComplexNumber::getImag() {
     return this->imag;
 }
 

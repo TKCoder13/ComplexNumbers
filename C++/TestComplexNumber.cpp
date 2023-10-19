@@ -1,5 +1,6 @@
 #include <iostream>
 #include "ComplexNumber.h"
+#include "ComplexNumber.cpp"
 
 using namespace std;
 
