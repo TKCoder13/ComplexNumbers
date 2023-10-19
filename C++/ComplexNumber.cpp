@@ -2,6 +2,7 @@
 
 #include <string>
 #include <typeinfo>
+#include <cmath>
 
 using namespace std;
 
@@ -99,7 +100,7 @@ ComplexNumber ComplexNumber::sqrt() {
         return output;
     } else if (this->real < 0) {
         double realOutput = 0;
-        double imagOutput = std::sqrt(std::abs(this->real)) + std::sqrt(this->imag);
+        double imagOutput = std::sqrt(abs(this->real)) + std::sqrt(this->imag);
         ComplexNumber output(realOutput, imagOutput);
         return output;
     } else if (this->imag < 0) {
