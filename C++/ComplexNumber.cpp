@@ -108,7 +108,9 @@ ComplexNumber ComplexNumber::div(ComplexNumber rhs) {
 } 
 
 double ComplexNumber::mag() {
-    double output = std::sqrt((this->real * this->real) + (this->imag * this->imag));
+    double realOutput = this->real;
+    double imagOutput = this->imag;
+    double output = std::sqrt(std::pow(realOutput, 2) + std::pow(imagOutput, 2));
     return output;
 }
 

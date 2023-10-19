@@ -39,7 +39,7 @@ int main(int argc, char** argv)
 		cout << "Exception: " << msg << endl;
 	}
 
-	cout << "|(" << lhs.toString() << ")|) = ";
+	cout << "|(" << lhs.toString() << ")| = ";
 	cout << lhs.mag() << endl;
 
 	cout << "conjugate(" << lhs.toString() << ")) = ";
