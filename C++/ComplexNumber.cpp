@@ -40,7 +40,34 @@ double ComplexNumber::getImag() {
 }
 
 string ComplexNumber::toString() {
-    return "";
+    bool realNegative = false;
+    bool imagNegative = false;
+    if (this->real < 0) realNegative = true;
+    if (this->imag < 0) imagNegative = true;
+    
+    double realOutput = std::abs(this->real);
+    double imagOutput = std::abs(this->imag);
+
+    if (realOutput == 0 && imagOutput == 0) {
+        return "0";
+    } else if (realOutput != 0 && imagOutput == 0) {
+        if (realNegative) 
+            return "-" + to_string(realOutput);
+        return to_string(realOutput);
+    } else if (realOutput == 0 && imagOutput != 0) {
+        if (imagNegative)
+            return "0 - " + to_string(imagOutput) + "i";
+        return to_string(imagOutput) + "i";
+    }
+    if (realNegative && imagNegative) {
+        return "-" + to_string(realOutput) + " - " + to_string(imagOutput) + "i";
+    } else if (realNegative) {
+        return "-" + to_string(realOutput) + " + " + to_string(imagOutput) + "i";
+    } else if (imagNegative) {
+        return to_string(realOutput) + " - " + to_string(imagOutput) + "i";
+    } else {
+        return to_string(realOutput) + " + " + to_string(imagOutput) + "i";
+    }
 }
 
 ComplexNumber ComplexNumber::add(ComplexNumber rhs) {
