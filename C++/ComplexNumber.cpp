@@ -48,13 +48,13 @@ string ComplexNumber::toString() {
     double realOutput = std::abs(this->real);
     double imagOutput = std::abs(this->imag);
 
-    if (realOutput == 0 && imagOutput == 0) {
+    if (realOutput == 0.0 && imagOutput == 0.0) {
         return "0";
-    } else if (realOutput != 0 && imagOutput == 0) {
+    } else if (realOutput != 0.0 && imagOutput == 0.0) {
         if (realNegative) 
             return "-" + to_string(realOutput);
         return to_string(realOutput);
-    } else if (realOutput == 0 && imagOutput != 0) {
+    } else if (realOutput == 0.0 && imagOutput != 0.0) {
         if (imagNegative)
             return "0 - " + to_string(imagOutput) + "i";
         return to_string(imagOutput) + "i";
@@ -94,17 +94,21 @@ ComplexNumber ComplexNumber::mult(ComplexNumber rhs) {
 ComplexNumber ComplexNumber::div(ComplexNumber rhs) {
     char divZeroMessage[] = "Cannot be divisible by 0";
     char *divZeroException = divZeroMessage;
+    double realOutput = 0;
+    double imagOutput = 0;
     try {
         if (rhs.real == 0 || rhs.imag == 0) {
             throw divZeroException;
+            exit;
+        } else {
+            realOutput = this->real / rhs.real;
+            imagOutput = this->imag / rhs.imag;
         }
-        double realOutput = this->real / rhs.real;
-        double imagOutput = this->imag / rhs.imag;
-        ComplexNumber output(realOutput, imagOutput);
-        return output;
     } catch (const char* exception) {
-        cout << exception << endl;
+        cout << "Exception: " << exception << endl;
     }
+    ComplexNumber output(realOutput, imagOutput);
+    return output;
 } 
 
 double ComplexNumber::mag() {
