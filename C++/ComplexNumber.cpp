@@ -121,6 +121,7 @@ double ComplexNumber::mag() {
 ComplexNumber ComplexNumber::conj() {
     double imagOutput = 0 - this->imag;
     ComplexNumber output(this->real, imagOutput);
+    return output;
 }
 
 ComplexNumber ComplexNumber::sqrt() {
