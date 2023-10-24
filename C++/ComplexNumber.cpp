@@ -103,12 +103,12 @@ ComplexNumber ComplexNumber::div(ComplexNumber rhs) {
         } else {
             realOutput = this->real / rhs.real;
             imagOutput = this->imag / rhs.imag;
+            ComplexNumber output(realOutput, imagOutput);
+            return output;
         }
     } catch (const char* exception) {
         cout << "Exception: " << exception << endl;
     }
-    ComplexNumber output(realOutput, imagOutput);
-    return output;
 } 
 
 double ComplexNumber::mag() {
