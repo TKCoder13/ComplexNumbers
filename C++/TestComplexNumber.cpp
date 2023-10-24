@@ -29,15 +29,15 @@ int main(int argc, char** argv)
 	cout << "(" << lhs.toString() << ") / (" << rhs.toString() << ") = ";
 	cout << "(" << result.toString() << ")" << endl;
 
-	try {
-		ComplexNumber rhs;
-		cout << "(" << lhs.toString() << ") / (" << rhs.toString() << ") = ";
-		result = lhs.div(rhs);
-		cout << "(" << result.toString() << ")" << endl;
-	}
-	catch (const char* msg) {
-		cout << "Exception: " << msg << endl;
-	}
+	// try {
+	// 	ComplexNumber rhs;
+	// 	cout << "(" << lhs.toString() << ") / (" << rhs.toString() << ") = ";
+	// 	result = lhs.div(rhs);
+	// 	cout << "(" << result.toString() << ")" << endl;
+	// }
+	// catch (const char* msg) {
+	// 	cout << "Exception: " << msg << endl;
+	// }
 
 	cout << "|(" << lhs.toString() << ")| = ";
 	cout << lhs.mag() << endl;
