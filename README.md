@@ -24,41 +24,41 @@
 # Header file (C++)
 
 **Public**
-- [ ] Constructors
-- [ ] Destrutors
-- [ ] setR()
-- [ ] setI()
-- [ ] getR()
-- [ ] getI()
-- [ ] toString()
-- [ ] add() 
-- [ ] sub() 
-- [ ] multi()
-- [ ] div() {div by 0 (real and imag), ArithmeticError}
-- [ ] mag()
-- [ ] conj()
-- [ ] sqrt()
-- [ ] equals()
-- [ ] Add ";" to end of .h file
+- [x] Constructors
+- [x] Destrutors
+- [x] setR()
+- [x] setI()
+- [x] getR()
+- [x] getI()
+- [x] toString()
+- [x] add() 
+- [x] sub() 
+- [x] multi()
+- [x] div() {div by 0 (real and imag), ArithmeticError}
+- [x] mag()
+- [x] conj()
+- [x] sqrt()
+- [x] equals()
+- [x] Add ";" to end of .h file
 
 **Private**
-- [ ] real
-- [ ] imag
+- [x] real
+- [x] imag
 
 # C++ File
 **Public**
-- [ ] Constructors
-- [ ] Destrutors
-- [ ] toString()
-- [ ] add() 
-- [ ] sub() 
-- [ ] multi()
-- [ ] div() {div by 0 (real and imag), ArithmeticError}
-- [ ] mag()
-- [ ] conj()
-- [ ] sqrt()
-- [ ] equals()
+- [x] Constructors
+- [x] Destrutors
+- [x] toString()
+- [x] add() 
+- [x] sub() 
+- [x] multi()
+- [ ] div() {div by 0 (real and imag), ArithmeticError (need to figure out why its returning values after an error is thrown)}
+- [x] mag()
+- [ ] conj() {tbh, idk whats going on here...}
+- [x] sqrt()
+- [x] equals()
 
 **Private**
-- [ ] real
-- [ ] imag
+- [x] real
+- [x] imag

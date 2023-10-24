@@ -57,6 +57,5 @@ int main(int argc, char** argv)
 	cout << "(" << lhs.toString() << ") == (" << rhs.toString() << ") = ";
 	cout << (lhs.equals(rhs) ? "true" : "false") << endl;
 
-
 	return 0;
 }
